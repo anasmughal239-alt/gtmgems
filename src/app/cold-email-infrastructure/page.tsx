@@ -34,6 +34,7 @@ export default function ColdEmailInfrastructure() {
         <Hero
           eyebrow={null}
           title="The infrastructure guide, not the pitch."
+          titleClassName="font-sans text-[2.5rem]/[2.75rem] font-bold tracking-[-0.02em] text-text-main lg:text-[3.25rem]/[3.5rem]"
           description="Domains, mailboxes, warmup, sequencing, deliverability — the engineering underneath every cold email program, and the numbers we hold ourselves to."
           primaryCta={{ label: "Book a call", href: "#book-a-call" }}
           visual={HERO_VISUAL}

@@ -30,6 +30,7 @@ export default function Home() {
         <Hero
           eyebrow={null}
           title="We build the outbound system. Not the excuses."
+          titleClassName="font-sans text-[2.5rem]/[2.75rem] font-bold tracking-[-0.02em] text-text-main lg:text-[3.25rem]/[3.5rem]"
           description={
             <>
               Signal-based targeting and deliverability infrastructure, built

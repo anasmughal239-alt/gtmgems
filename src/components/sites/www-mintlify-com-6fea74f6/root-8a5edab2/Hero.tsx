@@ -74,6 +74,7 @@ export function Hero({
   secondaryCta,
   secondaryIcon = <GoogleIcon className="size-4" />,
   visual = DEFAULT_VISUAL,
+  titleClassName = "font-serif text-[2.5rem]/[2.75rem] tracking-[-0.8px] text-text-main lg:text-[3.125rem]/[3.25rem] lg:tracking-[-2px]",
 }: {
   eyebrow?: EyebrowBadge | null;
   title?: string;
@@ -85,6 +86,15 @@ export function Hero({
   secondaryIcon?: ReactNode;
   /** The framed panel on the right. Defaults to the docs-preview mockup. */
   visual?: ReactNode;
+  /**
+   * Classes for the <h1>. Defaults to mintlify.com's exact font-serif +
+   * -2px tracking. That tracking value is tuned for Arizona Flare (the
+   * commercial font Mintlify actually ships); on the Instrument Serif
+   * substitute — a much lighter, looser display face — the same negative
+   * tracking crowds the letterforms. Override per-page rather than editing
+   * the default, so /mintlify's pixel fidelity stays untouched.
+   */
+  titleClassName?: string;
 }) {
   return (
     <section className="relative overflow-x-clip bg-background-main">
@@ -110,9 +120,7 @@ export function Hero({
             </Link>
           ) : null}
 
-          <h1 className="font-serif text-[2.5rem]/[2.75rem] tracking-[-0.8px] text-text-main lg:text-[3.125rem]/[3.25rem] lg:tracking-[-2px]">
-            {title}
-          </h1>
+          <h1 className={titleClassName}>{title}</h1>
 
           <p className="text-lg/6 text-text-sub">{description}</p>
         </div>
