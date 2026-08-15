@@ -14,7 +14,7 @@ import {
 } from "@/components/gtmgems/channel-content";
 
 export const metadata: Metadata = {
-  title: "Cold Email Infrastructure — gtmgems",
+  title: "Cold Email Infrastructure: gtmgems",
   description:
     "The infrastructure guide, not the pitch. Domains, mailboxes, warmup, sequencing, deliverability.",
 };
@@ -36,14 +36,14 @@ export default function ColdEmailInfrastructure() {
           sectionId="book-a-call"
           title="The infrastructure guide, not the pitch."
           titleClassName="font-sans text-[2.5rem]/[2.75rem] font-bold tracking-[-0.02em] text-text-main lg:text-[3.25rem]/[3.5rem]"
-          description="Domains, mailboxes, warmup, sequencing, deliverability — the engineering underneath every cold email program, and the numbers we hold ourselves to."
+          description="Domains, mailboxes, warmup, sequencing, deliverability: the engineering underneath every cold email program, and the numbers we hold ourselves to."
           primaryCta={{ label: "Book a call", href: "#book-a-call" }}
           visual={HERO_VISUAL}
         />
 
         <BenchmarkTable
           title="What the numbers actually look like."
-          subtitle="Sourced, not estimated — this is what a well-run program hits."
+          subtitle="Sourced, not estimated: this is what a well-run program hits."
           rows={COLD_EMAIL_BENCHMARKS}
         />
 
@@ -55,7 +55,7 @@ export default function ColdEmailInfrastructure() {
 
         <FinalCta
           title="Tell us your ACV and your current outbound setup."
-          description="Fifteen minutes. We qualify live against the fit criteria on the homepage — no form, no pre-screen."
+          description="Fifteen minutes. We qualify live against the fit criteria on the homepage, no form, no pre-screen."
           secondaryCta={null}
           primaryCta={{ label: "Book a call", href: "#book-a-call" }}
         />

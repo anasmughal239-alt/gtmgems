@@ -31,7 +31,7 @@ const SIGNALS: Rule[] = [
 
 const THRESHOLD_RULE: Rule = {
   when: "Weighted total clears the threshold",
-  then: "enriched and verified — otherwise discarded",
+  then: "enriched and verified, otherwise discarded",
 };
 
 export function SignalLibrary() {
@@ -46,7 +46,7 @@ export function SignalLibrary() {
             &ldquo;Signal-based&rdquo; is what everyone says.
           </h2>
           <p className="max-w-xl text-base/6 text-text-sub">
-            Here&apos;s what we actually watch — 9 triggers, weighted by how
+            Here&apos;s what we actually watch: 9 triggers, weighted by how
             strongly each one predicts intent, scored against every account
             in market.
           </p>

@@ -22,9 +22,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "gtmgems — Fractional GTM Engineering for funded B2B SaaS",
+  title: "gtmgems: Fractional GTM Engineering for funded B2B SaaS",
   description:
-    "Signal-based outbound infrastructure — cold email and LinkedIn — built and operated on tools you own. Not a lead-gen agency, not a cold email sender.",
+    "Signal-based outbound infrastructure (cold email and LinkedIn), built and operated on tools you own. Not a lead-gen agency, not a cold email sender.",
   icons: {
     icon: "/sites/www-mintlify-com-6fea74f6/root-8a5edab2/seo/favicon.ico",
   },

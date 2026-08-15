@@ -28,7 +28,7 @@ export function AutomationDemo() {
             Not a diagram of the idea.
           </h2>
           <p className="max-w-xl text-base/6 text-text-sub">
-            The queue and the routing logic underneath it — the same rules
+            The queue and the routing logic underneath it: the same rules
             that decide whether an account gets a signal score, an email
             sequence, or a LinkedIn message next.
           </p>
@@ -57,7 +57,7 @@ export function AutomationDemo() {
                 Nothing gets one shot.
               </span>{" "}
               An account that ignores the full email sequence drops to
-              LinkedIn — not because a rule guesses it should, but because it
+              LinkedIn, not because a rule guesses it should, but because it
               already didn&apos;t reply.
             </p>
           </div>

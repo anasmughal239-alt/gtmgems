@@ -32,12 +32,12 @@ export const HERO_VISUAL = (
 /** SocialProof stats marquee — spec strip + pricing, in place of Mintlify's
  *  usage counters. Odometer renders digits and treats the rest as static. */
 export const SPEC_STATS: StatItem[] = [
-  { label: "Stage", value: "Series A–B" },
-  { label: "ACV", value: "$10K–100K" },
+  { label: "Stage", value: "Series A-B" },
+  { label: "ACV", value: "$10K-100K" },
   { label: "Addressable market", value: "500+ accounts" },
   { label: "Minimum engagement", value: "3 months" },
-  { label: "Build phase", value: "$1,000–3,000" },
-  { label: "Retainer", value: "$10,000–12,000/mo" },
+  { label: "Build phase", value: "$1,000-3,000" },
+  { label: "Retainer", value: "$10,000-12,000/mo" },
 ];
 
 /** SocialProof's logo wall, in its honest state — no fabricated clients. */
@@ -74,7 +74,7 @@ export const WHAT_WE_BUILD: FeatureCardItem[] = [
     variant: "orbit",
   },
   {
-    title: "Built by the team behind Bounso — 99.2% catch-all accuracy",
+    title: "Built by the team behind Bounso: 99.2% catch-all accuracy",
     span: "sm:col-span-2 sm:aspect-[2/1] lg:col-span-3",
     variant: "grid",
   },
@@ -83,12 +83,12 @@ export const WHAT_WE_BUILD: FeatureCardItem[] = [
 /** ScaleAgentWeb's 3-stat row, repurposed as the deliverability spec. */
 export const DELIVERABILITY_STATS: StatItem[] = [
   { value: "3", label: "inboxes per sending domain" },
-  { value: "14–21 days", label: "warmup before first live send" },
-  { value: "2%", label: "bounce rate — hard stop, domain paused" },
+  { value: "14-21 days", label: "warmup before first live send" },
+  { value: "2%", label: "bounce rate (hard stop, domain paused)" },
 ];
 
 export const DELIVERABILITY_NOTE =
-  "SPF, DKIM, and DMARC enforced. Sending domains stay separate from the brand domain. Placement is tested weekly against a seed list across providers, and each account gets 1–2 contacts — multi-threading a small account reads as spam. If reply rate drops, we rewrite and retarget. We don't raise volume to hide it.";
+  "SPF, DKIM, and DMARC enforced. Sending domains stay separate from the brand domain. Placement is tested weekly against a seed list across providers, and each account gets 1-2 contacts (multi-threading a small account reads as spam). If reply rate drops, we rewrite and retarget. We don't raise volume to hide it.";
 
 /** BusinessSizes' customer-story carousel, repurposed as the cost comparison. */
 export const HONEST_MATH: CustomerStory[] = [
@@ -96,15 +96,15 @@ export const HONEST_MATH: CustomerStory[] = [
     title: "Hiring an in-house GTM engineer",
     href: "#math",
     stats: [
-      { value: "$130K–260K", label: "total comp (median ~$176K)" },
-      { value: "3–6 months", label: "to recruit, before any pipeline" },
+      { value: "$130K-260K", label: "total comp (median ~$176K)" },
+      { value: "3-6 months", label: "to recruit, before any pipeline" },
     ],
   },
   {
-    title: "gtmgems — a full-stack team, not one hire",
+    title: "gtmgems: a full-stack team, not one hire",
     href: "#pricing",
     stats: [
-      { value: "$120K–144K", label: "per year equivalent" },
+      { value: "$120K-144K", label: "per year equivalent" },
       { value: "4 weeks", label: "to live send" },
     ],
   },
@@ -112,7 +112,7 @@ export const HONEST_MATH: CustomerStory[] = [
     title: "AI SDR tools solve message generation, not the bottleneck",
     href: "#math",
     stats: [
-      { value: "$1.5K–5K", label: "per month" },
+      { value: "$1.5K-5K", label: "per month" },
       { value: "0", label: "of it covers integration or data hygiene" },
     ],
   },
@@ -120,7 +120,7 @@ export const HONEST_MATH: CustomerStory[] = [
     title: "Cheaper cold email agencies skip deliverability engineering",
     href: "#math",
     stats: [
-      { value: "$2.5K–4K", label: "per month" },
+      { value: "$2.5K-4K", label: "per month" },
       { value: "↑", label: "volume pushed through when placement slips" },
     ],
   },
@@ -132,13 +132,13 @@ export const FIT_CARDS: Testimonial[] = [
     name: "Qualified",
     role: "The actual bar",
     quote:
-      "The account cleared the signal score, the person replying holds budget authority or direct influence, and a specific next step was taken — call booked, proposal requested, pricing asked.",
+      "The account cleared the signal score, the person replying holds budget authority or direct influence, and a specific next step was taken: call booked, proposal requested, pricing asked.",
   },
   {
     name: "Not a lead",
     role: "Logged as a reply only",
     quote:
-      "“Thanks — send me more info.” No ICP check, no authority, no next step. A polite reply isn't a qualified lead.",
+      "“Thanks, send me more info.” No ICP check, no authority, no next step. A polite reply isn't a qualified lead.",
   },
   {
     name: "When we won't take the call",

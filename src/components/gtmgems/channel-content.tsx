@@ -9,17 +9,17 @@ export const COLD_EMAIL_BENCHMARKS: BenchmarkRow[] = [
     source: "Instantly Cold Email Benchmark Report 2026",
   },
   {
-    stat: "3–5%",
+    stat: "3-5%",
     meaning: "Well-run campaign reply rate",
     source: "Apollo",
   },
   {
-    stat: "8–12%",
+    stat: "8-12%",
     meaning: "Elite-tier reply rate",
     source: "Instantly 2026",
   },
   {
-    stat: "7–8%",
+    stat: "7-8%",
     meaning: "Average bounce rate industry-wide",
     source: "LeadHaste 2026",
   },
@@ -44,7 +44,7 @@ export const COLD_EMAIL_BENCHMARKS: BenchmarkRow[] = [
     source: "Cleanlist 2026",
   },
   {
-    stat: "2–6x",
+    stat: "2-6x",
     meaning: "Reply lift from verified vs. unverified/purchased lists",
     source: "Cleanlist",
   },
@@ -53,25 +53,25 @@ export const COLD_EMAIL_BENCHMARKS: BenchmarkRow[] = [
 export const COLD_EMAIL_FAQ: FaqItem[] = [
   {
     q: "Why can't warmup be faster?",
-    a: "Mailbox providers score sending reputation off real usage patterns over time — there's no way to compress that signal. We ramp 14–21 days before the first live send; pushing volume earlier just gets the domain flagged before it's earned trust.",
+    a: "Mailbox providers score sending reputation off real usage patterns over time, and there's no way to compress that signal. We ramp 14-21 days before the first live send; pushing volume earlier just gets the domain flagged before it's earned trust.",
   },
   {
     q: "What happens when a domain gets flagged?",
-    a: "It's paused and diagnosed immediately — our hard stop is a 2% bounce rate. We don't keep sending through a domain that's already burning; we find the cause, fix it, and re-warm before it goes back into rotation.",
+    a: "It's paused and diagnosed immediately: our hard stop is a 2% bounce rate. We don't keep sending through a domain that's already burning; we find the cause, fix it, and re-warm before it goes back into rotation.",
   },
   {
     q: "Why no guaranteed reply rate?",
-    a: "Reply rate depends on your offer, ICP, and market conditions — none of which we control. We're accountable for the system working correctly, the same standard an in-house hire is held to, not for a number that isn't ours to guarantee.",
+    a: "Reply rate depends on your offer, ICP, and market conditions, none of which we control. We're accountable for the system working correctly, the same standard an in-house hire is held to, not for a number that isn't ours to guarantee.",
   },
   {
     q: "Why does infrastructure work beat a cheaper sending tool alone?",
-    a: "A sending tool doesn't own domain architecture, authentication, warmup discipline, or placement testing — those are engineering problems, not settings you toggle. Skip them and volume looks fine until the day it isn't.",
+    a: "A sending tool doesn't own domain architecture, authentication, warmup discipline, or placement testing: those are engineering problems, not settings you toggle. Skip them and volume looks fine until the day it isn't.",
   },
 ];
 
 export const LINKEDIN_BENCHMARKS: BenchmarkRow[] = [
   {
-    stat: "28–30%",
+    stat: "28-30%",
     meaning: "Average connection acceptance rate",
     source: "Expandi 2026 (13.2M data points)",
   },
@@ -86,22 +86,22 @@ export const LINKEDIN_BENCHMARKS: BenchmarkRow[] = [
     source: "Overloop 2026",
   },
   {
-    stat: "10–25%",
+    stat: "10-25%",
     meaning: "Typical InMail reply rate range",
     source: "Belkins 2026",
   },
   {
-    stat: "30–50%",
+    stat: "30-50%",
     meaning: "Top-performing personalized sequence reply rate",
     source: "Belkins 2026",
   },
   {
-    stat: "15–25/day",
+    stat: "15-25/day",
     meaning: "Safe connection requests, warmed account (~100/week)",
     source: "LeadLoft 2026",
   },
   {
-    stat: "100–150/day",
+    stat: "100-150/day",
     meaning: "Safe messages to existing connections",
     source: "ConnectSafely 2026",
   },
@@ -120,7 +120,7 @@ export const LINKEDIN_BENCHMARKS: BenchmarkRow[] = [
 export const LINKEDIN_FAQ: FaqItem[] = [
   {
     q: "Why are the volume limits conservative on purpose?",
-    a: "An acceptance rate under 30% is what triggers LinkedIn's own throttling. We stay well inside 15–25 connection requests and 100–150 messages a day per warmed account — the ceiling isn't the goal, staying off LinkedIn's radar is.",
+    a: "An acceptance rate under 30% is what triggers LinkedIn's own throttling. We stay well inside 15-25 connection requests and 100-150 messages a day per warmed account. The ceiling isn't the goal, staying off LinkedIn's radar is.",
   },
   {
     q: "Why cloud-based automation over a Chrome extension?",
@@ -128,7 +128,7 @@ export const LINKEDIN_FAQ: FaqItem[] = [
   },
   {
     q: "What happens on reply?",
-    a: "The sequence halts immediately — no more scheduled steps go out once someone responds. Everything past that point is a real conversation, not automation.",
+    a: "The sequence halts immediately: no more scheduled steps go out once someone responds. Everything past that point is a real conversation, not automation.",
   },
   {
     q: "Why no guaranteed acceptance or reply rate?",

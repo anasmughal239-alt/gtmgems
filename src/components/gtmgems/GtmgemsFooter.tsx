@@ -82,7 +82,7 @@ export function GtmgemsFooter() {
             © {new Date().getFullYear()} gtmgems.
           </span>
           <span className="text-xs/4 text-text-sub">
-            No case study yet — we&apos;re running this system against our own
+            No case study yet: we&apos;re running this system against our own
             pipeline first.
           </span>
         </div>

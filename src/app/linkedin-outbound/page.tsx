@@ -14,7 +14,7 @@ import {
 } from "@/components/gtmgems/channel-content";
 
 export const metadata: Metadata = {
-  title: "LinkedIn Outbound — gtmgems",
+  title: "LinkedIn Outbound: gtmgems",
   description:
     "The other channel, run on its own rules. Connection requests, message sequencing, reply detection.",
 };
@@ -36,14 +36,14 @@ export default function LinkedInOutbound() {
           sectionId="book-a-call"
           title="The other channel, run on its own rules."
           titleClassName="font-sans text-[2.5rem]/[2.75rem] font-bold tracking-[-0.02em] text-text-main lg:text-[3.25rem]/[3.5rem]"
-          description="Connection requests, message sequencing, reply detection — LinkedIn has its own throttling and its own failure modes, so it gets its own operating limits."
+          description="Connection requests, message sequencing, reply detection: LinkedIn has its own throttling and its own failure modes, so it gets its own operating limits."
           primaryCta={{ label: "Book a call", href: "#book-a-call" }}
           visual={HERO_VISUAL}
         />
 
         <BenchmarkTable
           title="What the numbers actually look like."
-          subtitle="Sourced, not estimated — this is what a well-run sequence hits."
+          subtitle="Sourced, not estimated: this is what a well-run sequence hits."
           rows={LINKEDIN_BENCHMARKS}
         />
 
@@ -55,7 +55,7 @@ export default function LinkedInOutbound() {
 
         <FinalCta
           title="Tell us your ACV and your current outbound setup."
-          description="Fifteen minutes. We qualify live against the fit criteria on the homepage — no form, no pre-screen."
+          description="Fifteen minutes. We qualify live against the fit criteria on the homepage, no form, no pre-screen."
           secondaryCta={null}
           primaryCta={{ label: "Book a call", href: "#book-a-call" }}
         />

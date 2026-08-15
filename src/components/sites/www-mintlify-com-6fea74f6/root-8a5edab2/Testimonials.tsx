@@ -37,11 +37,20 @@ export function Testimonials({
   subtitle = "",
   cta = { label: "Read more", href: "/customers" },
   testimonials = DEFAULT_TESTIMONIALS,
+  gridClassName = "grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-0",
 }: {
   title?: string;
   subtitle?: string;
   cta?: SectionCta;
   testimonials?: Testimonial[];
+  /**
+   * Grid classes for the card wrapper. Defaults to mintlify.com's exact
+   * grid-cols-3 at lg. Override when the card count is exactly 3 -- three
+   * equal cards in one row is a banned pattern (design-taste-frontend
+   * skill, Section 9.C); at 4 testimonials (the Mintlify default) it wraps
+   * 3+1 and isn't the same tell, so the default stays untouched.
+   */
+  gridClassName?: string;
 } = {}) {
   return (
     <section>
@@ -49,7 +58,7 @@ export function Testimonials({
 
       <div className="grid-layout relative">
         <div className="col-span-full py-4 lg:p-4">
-          <div className="grid grid-cols-1 gap-4 px-4 md:grid-cols-2 lg:grid-cols-3 lg:px-0">
+          <div className={gridClassName}>
             {testimonials.map((t) => (
               <FeatureCard as="figure" key={t.name} className="gap-6 p-7">
                 <figcaption className="flex flex-col gap-0.5">

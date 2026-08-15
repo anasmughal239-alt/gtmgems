@@ -28,25 +28,25 @@ interface Tier {
 const TIERS: Tier[] = [
   {
     eyebrow: "Build phase",
-    price: "$1,000–3,000",
+    price: "$1,000-3,000",
     cadence: "one-time",
-    description: "Days 1–28. Scoped to email-only or email + LinkedIn.",
+    description: "Days 1-28. Scoped to email-only or email + LinkedIn.",
     features: [
       "ICP, signal weightings, disqualifier list",
       "Domains, DNS, auth, inboxes",
-      "14–21 day warmup, untouched",
+      "14-21 day warmup, untouched",
       "Placement testing + CRM handoff",
     ],
     cta: { label: "Book a call", href: "#book-a-call" },
   },
   {
     eyebrow: "Fractional retainer",
-    price: "$10,000–12,000",
+    price: "$10,000-12,000",
     cadence: "/mo",
     description: "Starts from first live send. 3-month minimum.",
     features: [
       "Scoped to your channel mix and volume",
-      "Direct access to both operators — no account managers",
+      "Direct access to both operators, no account managers",
       "Weekly placement testing, ongoing",
       "Retarget and rewrite, not raise volume, when reply drops",
     ],
@@ -70,8 +70,8 @@ export function PricingSection() {
             Flat build, metered retainer.
           </h2>
           <p className="text-base/6 text-text-sub">
-            Tooling runs roughly $500–2,000/mo on top of this, quoted
-            honestly before you commit. No lead-count guarantee — see why on
+            Tooling runs roughly $500-2,000/mo on top of this, quoted
+            honestly before you commit. No lead-count guarantee: see why on
             the fit section above.
           </p>
         </div>
