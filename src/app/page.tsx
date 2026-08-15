@@ -9,6 +9,7 @@ import { AutomationDemo } from "@/components/gtmgems/AutomationDemo";
 import { GtmgemsFooter } from "@/components/gtmgems/GtmgemsFooter";
 import { GtmgemsHeader } from "@/components/gtmgems/GtmgemsHeader";
 import { PricingSection } from "@/components/gtmgems/PricingSection";
+import { SignalLibrary } from "@/components/gtmgems/SignalLibrary";
 import {
   DELIVERABILITY_NOTE,
   DELIVERABILITY_STATS,
@@ -57,6 +58,8 @@ export default function Home() {
           stats={SPEC_STATS}
           logoCards={EMPTY_LOGO_CARDS}
         />
+
+        <SignalLibrary />
 
         <PlatformOverview
           title="A GTM engineer's job is the system."
