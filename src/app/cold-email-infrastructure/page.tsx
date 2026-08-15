@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 
 import { FinalCta } from "@/components/sites/www-mintlify-com-6fea74f6/root-8a5edab2/FinalCta";
 import { Hero } from "@/components/sites/www-mintlify-com-6fea74f6/root-8a5edab2/Hero";
-import { StreamLines } from "@/components/system/illustration/StreamLines";
-import { DocsSyncIllustration } from "@/components/system/illustration/presets";
+import { EmailSequenceDiagram } from "@/components/system/illustration/EmailSequenceDiagram";
 import { BenchmarkTable } from "@/components/gtmgems/BenchmarkTable";
 import { FaqList } from "@/components/gtmgems/FaqList";
 import { GtmgemsFooter } from "@/components/gtmgems/GtmgemsFooter";
@@ -23,9 +22,10 @@ export const metadata: Metadata = {
 };
 
 const HERO_VISUAL = (
-  <div className="absolute inset-0 overflow-hidden rounded-t-[2.22cqw] border-l border-r border-t border-border-primary bg-[#f9f6f3] dark:bg-[#0f0f12]">
-    <StreamLines opacity={0.7} />
-    <DocsSyncIllustration />
+  <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-t-[2.22cqw] border-l border-r border-t border-border-primary bg-background-soft p-6">
+    <div className="w-full max-w-sm">
+      <EmailSequenceDiagram />
+    </div>
   </div>
 );
 

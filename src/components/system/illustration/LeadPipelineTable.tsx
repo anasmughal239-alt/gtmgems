@@ -1,16 +1,15 @@
 import { cn } from "@/lib/utils";
+import { STATUS_COLORS } from "./stageColors";
 
 /**
- * A literal (not abstract) mocked data table — pipeline stage per row, styled
- * entirely with existing Mintlify-derived tokens.
+ * A literal (not abstract) mocked data table — pipeline stage per row.
  *
- * Pattern borrowed from scrapeloop.com's live lead table (read-only
- * inspection, not cloned): rounded-full status pills, small semibold labels,
- * monospace data cells. Recreated here with gtmgems' own tokens — `font-paper`
- * (Mintlify's mono, already used for Odometer/benchmark numbers) stands in for
- * their IBM Plex Mono, and the pill tint is `--color-brand-vivid` at low
- * alpha, the same `rgba(31,167,122,…)` value already used for the Hero
- * "Agent traffic"-style badge elsewhere on the page — not a new color.
+ * Structural pattern borrowed from scrapeloop.com's live lead table
+ * (read-only inspection, not cloned): rounded-full status pills, small
+ * semibold labels, monospace data cells. Recolored per Airtable's actual
+ * multi-hue status-coding convention (read-only inspection of airtable.com's
+ * inline SVG palette) instead of a single green/grey binary — each outcome
+ * gets its own hue, the way Airtable colors a status column.
  */
 
 export type PipelineStatus = "Qualified" | "Scored" | "Discarded";
@@ -30,14 +29,11 @@ const DEFAULT_ROWS: PipelineRow[] = [
 ];
 
 function StatusPill({ status }: { status: PipelineStatus }) {
+  const c = STATUS_COLORS[status];
   return (
     <span
-      className={cn(
-        "inline-flex items-center rounded-full px-2 py-0.5 text-[10px]/4 font-semibold tracking-[0.01em]",
-        status === "Qualified" && "bg-[rgba(31,167,122,0.12)] text-brand",
-        status === "Scored" && "bg-background-tertiary text-text-sub",
-        status === "Discarded" && "bg-background-tertiary text-text-soft",
-      )}
+      className="inline-flex items-center rounded-full px-2 py-0.5 text-[10px]/4 font-semibold tracking-[0.01em]"
+      style={{ backgroundColor: c.bg, color: c.hex }}
     >
       {status}
     </span>
@@ -57,7 +53,7 @@ export function LeadPipelineTable({
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-[8px] border border-border-sub bg-background-main",
+        "overflow-hidden rounded-[14px] border border-border-sub bg-background-main shadow-[0_2px_8px_rgba(20,25,35,0.06)]",
         className,
       )}
     >
