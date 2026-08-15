@@ -8,6 +8,7 @@ import { Testimonials } from "@/components/sites/www-mintlify-com-6fea74f6/root-
 import { AutomationDemo } from "@/components/gtmgems/AutomationDemo";
 import { GtmgemsFooter } from "@/components/gtmgems/GtmgemsFooter";
 import { GtmgemsHeader } from "@/components/gtmgems/GtmgemsHeader";
+import { PricingSection } from "@/components/gtmgems/PricingSection";
 import {
   DELIVERABILITY_NOTE,
   DELIVERABILITY_STATS,
@@ -29,6 +30,7 @@ export default function Home() {
       <main>
         <Hero
           eyebrow={null}
+          sectionId="book-a-call"
           title="We build the outbound system. Not the excuses."
           titleClassName="font-sans text-[2.5rem]/[2.75rem] font-bold tracking-[-0.02em] text-text-main lg:text-[3.25rem]/[3.5rem]"
           description={
@@ -86,6 +88,8 @@ export default function Home() {
           cta={{ label: "Book a call", href: "#book-a-call" }}
           testimonials={FIT_CARDS}
         />
+
+        <PricingSection />
 
         <FinalCta
           title="Tell us your ACV and your current outbound setup."

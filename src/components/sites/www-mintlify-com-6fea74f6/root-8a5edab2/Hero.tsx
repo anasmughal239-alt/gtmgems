@@ -75,6 +75,7 @@ export function Hero({
   secondaryIcon = <GoogleIcon className="size-4" />,
   visual = DEFAULT_VISUAL,
   titleClassName = "font-serif text-[2.5rem]/[2.75rem] tracking-[-0.8px] text-text-main lg:text-[3.125rem]/[3.25rem] lg:tracking-[-2px]",
+  sectionId,
 }: {
   eyebrow?: EyebrowBadge | null;
   title?: string;
@@ -95,9 +96,15 @@ export function Hero({
    * the default, so /mintlify's pixel fidelity stays untouched.
    */
   titleClassName?: string;
+  /** Optional id on the root <section>, so #anchor links elsewhere on the
+   *  page can scroll here. Unset by default — /mintlify doesn't need it. */
+  sectionId?: string;
 }) {
   return (
-    <section className="relative overflow-x-clip bg-background-main">
+    <section
+      id={sectionId}
+      className="relative overflow-x-clip bg-background-main"
+    >
       <HeroCanvas />
 
       <div className="grid-layout relative z-10 items-start gap-y-8 pt-6 lg:gap-y-0 lg:pb-0 lg:pt-20">

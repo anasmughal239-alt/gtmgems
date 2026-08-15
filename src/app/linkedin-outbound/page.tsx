@@ -33,6 +33,7 @@ export default function LinkedInOutbound() {
       <main>
         <Hero
           eyebrow={null}
+          sectionId="book-a-call"
           title="The other channel, run on its own rules."
           titleClassName="font-sans text-[2.5rem]/[2.75rem] font-bold tracking-[-0.02em] text-text-main lg:text-[3.25rem]/[3.5rem]"
           description="Connection requests, message sequencing, reply detection — LinkedIn has its own throttling and its own failure modes, so it gets its own operating limits."
