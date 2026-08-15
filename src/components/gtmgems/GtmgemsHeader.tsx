@@ -1,79 +1,67 @@
 import Link from "next/link";
 
-import { mintButton } from "@/components/system/button-variants";
-
-import { GtmgemsMark, MenuIcon } from "./icons";
+import { GtmButton } from "./ui/Button";
+import { GtmgemsMark } from "./icons";
 
 const NAV_ITEMS = [
-  { label: "Infrastructure", href: "/cold-email-infrastructure" },
-  { label: "LinkedIn", href: "/linkedin-outbound" },
+  { label: "Signals", href: "#signals" },
+  { label: "Spec", href: "#spec" },
+  { label: "Process", href: "#how-it-runs" },
+  { label: "Fit", href: "#fit" },
   { label: "Pricing", href: "#pricing" },
 ];
 
+/** Floating "Island" nav (high-end-visual-design's Fluid Island pattern):
+ *  detached pill, not an edge-to-edge sticky bar. Sticky top-4 so it stays
+ *  reachable without eating viewport like a full-width bar would. */
 export function GtmgemsHeader() {
   return (
-    <>
-      {/* Desktop — lg and up. Same chrome as the Mintlify clone: the header
-          does not react to scroll (verified as intentional, see QA_REPORT.md
-          in the clone research folder — kept as house style here). */}
-      <header className="sticky top-0 z-[100] hidden w-full border-b border-border-line bg-background-main lg:block">
-        <div className="grid-layout h-16 items-center">
-          <nav className="relative col-span-full flex h-16 w-full items-center justify-between">
-            <Link
-              href="/"
-              aria-label="Go to homepage"
-              className="flex items-center gap-2 rounded-[4px] outline-none outline-offset-2 focus-visible:outline-2 focus-visible:outline-brand"
-            >
-              <GtmgemsMark className="size-6" />
-              <span className="text-sm font-medium tracking-[-0.01em] text-text-main">
-                gtmgems
-              </span>
-            </Link>
+    <header className="sticky top-4 z-[100] mx-auto hidden w-fit lg:block">
+      <nav className="flex items-center gap-1 rounded-full border border-border-primary bg-background-main/90 py-1.5 pl-4 pr-1.5 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_24px_rgba(0,0,0,0.04)] backdrop-blur-md">
+        <Link
+          href="/"
+          aria-label="Go to homepage"
+          className="mr-2 flex items-center gap-1.5 rounded-full outline-none focus-visible:outline-2 focus-visible:outline-brand"
+        >
+          <GtmgemsMark className="size-5" />
+        </Link>
 
-            <div className="absolute left-1/2 top-0 flex h-16 -translate-x-1/2 items-center">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="flex h-16 items-center gap-1 px-2.5 py-1 text-sm/4 font-medium text-text-main outline-offset-2 transition-colors duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-background-soft focus-visible:outline-2 focus-visible:outline-brand"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-
-            <Link
-              href="#book-a-call"
-              className={mintButton({ variant: "primary", size: "sm" })}
-            >
-              Book a call
-            </Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* Mobile — below lg */}
-      <header className="sticky top-0 z-[100] w-full bg-neutral-0 lg:hidden">
-        <div className="relative z-[110] flex h-16 items-center justify-between border-b border-border-line bg-neutral-0 px-5">
+        {NAV_ITEMS.map((item) => (
           <Link
-            href="/"
-            aria-label="Go to homepage"
-            className="flex items-center gap-2 rounded-[4px] outline-none outline-offset-2 focus-visible:outline-2 focus-visible:outline-brand"
+            key={item.label}
+            href={item.href}
+            className="rounded-full px-3 py-1.5 text-sm text-text-sub transition-colors duration-200 hover:bg-black/[0.03] hover:text-text-main"
           >
-            <GtmgemsMark className="size-6" />
-            <span className="text-sm font-medium tracking-[-0.01em] text-text-main">
-              gtmgems
-            </span>
+            {item.label}
           </Link>
-          <button
-            type="button"
-            aria-label="Open menu"
-            className="-mr-1.5 inline-flex size-[34px] items-center justify-center rounded-[4px] border border-border-sub text-text-main outline-offset-2 transition-colors duration-100 hover:bg-background-soft focus-visible:outline-2 focus-visible:outline-brand"
-          >
-            <MenuIcon className="size-4" />
-          </button>
+        ))}
+
+        <div className="ml-1">
+          <GtmButton href="#book-a-call" size="sm" icon={false}>
+            Book a call
+          </GtmButton>
         </div>
-      </header>
-    </>
+      </nav>
+    </header>
+  );
+}
+
+/** Mobile: simple bar, no floating pill (avoids fighting the viewport
+ *  edge on small screens). */
+export function GtmgemsMobileHeader() {
+  return (
+    <header className="sticky top-0 z-[100] flex w-full items-center justify-between border-b border-border-line bg-background-main px-5 py-3 lg:hidden">
+      <Link
+        href="/"
+        aria-label="Go to homepage"
+        className="flex items-center gap-1.5"
+      >
+        <GtmgemsMark className="size-5" />
+        <span className="text-sm font-medium text-text-main">gtmgems</span>
+      </Link>
+      <GtmButton href="#book-a-call" size="sm" icon={false}>
+        Book a call
+      </GtmButton>
+    </header>
   );
 }

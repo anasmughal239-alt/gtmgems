@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Geist_Mono, Instrument_Serif, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Instrument_Serif, Inter } from "next/font/google";
 import "./globals.css";
 
 // mintlify.com ships Inter for all UI/body text — exact match, freely licensed.
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+// gtmgems' own typeface, scoped locally via a CSS var override on the
+// gtmgems root wrapper (not applied to :root) so /mintlify keeps Inter
+// untouched. Pairs with the Geist Mono already in use for data/numerals --
+// one coherent family across display, body, and data, not three unrelated
+// choices.
+const geist = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
@@ -41,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${instrumentSerif.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${instrumentSerif.variable} ${geistMono.variable} ${geist.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col overflow-x-hidden bg-background-main font-sans">
         {children}

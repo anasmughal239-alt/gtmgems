@@ -7,7 +7,10 @@ import { AskAiIllustration } from "@/components/system/illustration/presets";
 import { BenchmarkTable } from "@/components/gtmgems/BenchmarkTable";
 import { FaqList } from "@/components/gtmgems/FaqList";
 import { GtmgemsFooter } from "@/components/gtmgems/GtmgemsFooter";
-import { GtmgemsHeader } from "@/components/gtmgems/GtmgemsHeader";
+import {
+  GtmgemsHeader,
+  GtmgemsMobileHeader,
+} from "@/components/gtmgems/GtmgemsHeader";
 import {
   LINKEDIN_BENCHMARKS,
   LINKEDIN_FAQ,
@@ -28,8 +31,11 @@ const HERO_VISUAL = (
 
 export default function LinkedInOutbound() {
   return (
-    <>
-      <GtmgemsHeader />
+    <div className="[--font-sans:var(--font-geist-sans)]">
+      <GtmgemsMobileHeader />
+      <div className="lg:mt-4 lg:flex lg:justify-center">
+        <GtmgemsHeader />
+      </div>
       <main>
         <Hero
           eyebrow={null}
@@ -61,6 +67,6 @@ export default function LinkedInOutbound() {
         />
       </main>
       <GtmgemsFooter />
-    </>
+    </div>
   );
 }
