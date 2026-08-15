@@ -5,6 +5,7 @@ import { PlatformOverview } from "@/components/sites/www-mintlify-com-6fea74f6/r
 import { ScaleAgentWeb } from "@/components/sites/www-mintlify-com-6fea74f6/root-8a5edab2/ScaleAgentWeb";
 import { SocialProof } from "@/components/sites/www-mintlify-com-6fea74f6/root-8a5edab2/SocialProof";
 import { Testimonials } from "@/components/sites/www-mintlify-com-6fea74f6/root-8a5edab2/Testimonials";
+import { AutomationDemo } from "@/components/gtmgems/AutomationDemo";
 import { GtmgemsFooter } from "@/components/gtmgems/GtmgemsFooter";
 import { GtmgemsHeader } from "@/components/gtmgems/GtmgemsHeader";
 import {
@@ -60,6 +61,8 @@ export default function Home() {
           cta={{ label: "Book a call", href: "#book-a-call" }}
           cards={WHAT_WE_BUILD}
         />
+
+        <AutomationDemo />
 
         <ScaleAgentWeb
           title="The numbers we hold ourselves to."

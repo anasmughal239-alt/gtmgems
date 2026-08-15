@@ -6,9 +6,7 @@
  * copy for those props. See src/components/sites/.../root-8a5edab2/*.tsx.
  */
 import { StreamLines } from "@/components/system/illustration/StreamLines";
-import {
-  ConfigUpdateIllustration,
-} from "@/components/system/illustration/presets";
+import { LeadPipelineTable } from "@/components/system/illustration/LeadPipelineTable";
 import type {
   CustomerStory,
   FeatureCardItem,
@@ -17,12 +15,17 @@ import type {
   Testimonial,
 } from "@/types/mintlify";
 
-/** Hero's right-side visual: an AutomationCard-style illustration instead of
- *  the Mintlify docs-preview screenshot, using the same illustration system. */
+/** Hero's right-side visual: the live queue instead of an abstract
+ *  illustration — same idea as scrapeloop.com leading with its table, styled
+ *  in the existing Mintlify tokens. See AutomationDemo.tsx for the full
+ *  version further down the page. */
 export const HERO_VISUAL = (
-  <div className="absolute inset-0 overflow-hidden rounded-t-[2.22cqw] border-l border-r border-t border-border-primary bg-[#f9f6f3] dark:bg-[#0f0f12]">
-    <StreamLines opacity={0.7} />
-    <ConfigUpdateIllustration label="Update config" />
+  <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-t-[2.22cqw] border-l border-r border-t border-border-primary bg-[#f9f6f3] p-6 dark:bg-[#0f0f12]">
+    <StreamLines opacity={0.5} />
+    <LeadPipelineTable
+      compact
+      className="relative w-full max-w-[26rem] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+    />
   </div>
 );
 
